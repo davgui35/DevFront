@@ -4,7 +4,5 @@ body {
 
 #effets div {
     background: red;
-    width: 30px;
-    height: 40px;
-    margin: 2px;
+    height: 100px;
 }
