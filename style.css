@@ -1,3 +1,10 @@
 body {
     background-color: blanchedalmond;
 }
+
+#effets div {
+    background: red;
+    width: 30px;
+    height: 40px;
+    margin: 2px;
+}
