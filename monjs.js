@@ -5,8 +5,10 @@ $(document).ready(function(){
         $('<div class="col-1 boite">').appendTo('#effets')
     }
 //ajoute 5 fois la boite rouge
-$("effets div").click(function(){ $(this).hide( 2000, function(){
-    $(this).remove();});
+$("#effets div").click(function() {
+ $( this ).hide( 2000, function() {
+    $( this ).remove();
+    });
 });
 });
 
