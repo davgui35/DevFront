@@ -48,6 +48,7 @@ body {
 /*Aucune image est visible*/
 #photos div img{
     display: none;
+    filter: sepia(1);
 }
 
 #photos nav ul{
@@ -63,5 +64,15 @@ body {
 #photos nav li img{
     max-width: 100%;
     height: auto;
+    filter: blur(1px);/*flou*/
+    filter: grayscale(1);/*Noir et blanc*/
+    filter: brightness(140%);
+    filter: invert(1);/*inverse les couleur*/
 }
 
+#photos nav li img:hover{
+    filter: blur(0);/*l'enlever au survol*/
+    filter: grayscale(0);/*Noir et blanc*/
+    filter: invert(0);
+    filter: brightness(0);
+}
