@@ -7,3 +7,21 @@ body {
     height: 100px;
     margin: 2px;
 }
+
+/*les trois boites*/
+#tests div {
+    background: red;
+    height: 100px;
+    margin: 2px;
+}
+
+/*la boite test*/
+#animate div {
+    background: red;
+    height: 100px;
+    margin: 2px;
+}
+
+.alerte{
+    color:red;
+}
