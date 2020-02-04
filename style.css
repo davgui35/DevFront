@@ -25,3 +25,22 @@ body {
 .alerte{
     color:red;
 }
+
+/*la boite test*/
+#maBoite{
+    background: red;
+    height: 100px;
+    margin: 2px;
+}
+
+.highlight{
+    background-color: yellow;
+}
+
+.bordure{
+    border:5px solid black;
+}
+
+.vert{
+    background-color: green !important;
+}

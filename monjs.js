@@ -9,7 +9,7 @@ $(document).ready(function(){
     //ajoute 5 fois la boite rouge
     $("#effets div").click(function() {
     $( this ).hide( 2000, function() {
-        // $( this ).remove();
+        // $( this ).remove();//Pour supprimer
         });
     });
     $("#show").click(function(){
@@ -67,18 +67,68 @@ $(document).ready(function(){
 
     //Reprise du nombre de li plus 1
     var i = $('li').length + 1;
+    console.log(i);
     //alert(i);afficher une boite de dialogue
     $('#plus').click(function(){
         $('<li>ligne' + i + '</li>').appendTo('ul');
-        i++;//Ajoute la liste en plus
+        i++;//Ajoute une liste en plus
+        if(i > 1){
+            $('#moins').show();//Affiche le button si supérieur à 1
+        }
+        console.log(i);
     });
 
     //Retirer le dernier li rajouté
     $("#moins").click(function(){
-        $('li:last').remove();
-        i--;
+        if(i > 1){
+            $('li:last').remove();//supprime le dernier li
+            i--;
+        }else if(i == 1){
+            $(this).hide();//Cache le bouton
+        }
+        console.log(i);
     });
 
+    //TOGGLE EFFECTS
+    $('#theToggle').click(function(){
+        $('#maBoite').toggle(2000);//faire disparaitre la boite
+        $('#maBoite').toggleClass('bordure');//faire apparaitre la boite
+    });
+
+    // //Affichage class highlight tous les paragraphes
+    // $('p').click(function(){
+    //     $('p').toggleClass('highlight');
+    // });
+
+    //Pour un paragraphe un par un
+    $('#toggle p').click(function(){
+        $(this).toggleClass('highlight');
+    });
+
+    //Pour un paragraphe un par un
+    $('#toggle p').hover(function(){
+        $('#maBoite').toggleClass('vert');
+    });
+
+    //Agrandir ou diminuer la taille de la police
+    $('button.taille').click(function(){
+        var os = $('#toggle p').css('font-size');
+        //recupere la valeur par defaut 16px attacher
+        var number = parseFloat(os); //avec number on recuperer que les chiffres = 16
+        var uom = os.slice(-2);
+        //On recupere les deux derniers caracteres( = px)
+        if(this.id=='pluspetit'){
+            number /= 1.4;
+        }else{
+            number *= 1.4;
+        }
+        console.log(number);
+        $('#toggle p').css('font-size', number + uom);
+    });
+
+
 });
+//https://github.com/erwantanguy/B1MDSDevFront
 
-
+//images https://picsum.photos/640/360
+//vignette https://picsum.photos/150/150
