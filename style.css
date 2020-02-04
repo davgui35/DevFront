@@ -48,7 +48,7 @@ body {
 /*Aucune image est visible*/
 #photos div img{
     display: none;
-    filter: sepia(1);
+    filter: sepia(1); 
 }
 
 #photos nav ul{
