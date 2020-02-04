@@ -25,11 +25,13 @@ $(document).ready(function(){
     $('#box2').click(function(){
         //En concaténant
         $(this).css('background-color','blue').fadeOut(2000);
+        //Masquez les éléments correspondants en les fondant en transparence.
     });
         
     $('#box3').click(function(){
         $(this).css('background-color','purple');
         $(this).slideUp(4000);
+        // Masquez les éléments correspondants avec un mouvement coulissant.
     });
 
     $('#animate div').click(function(){
@@ -125,7 +127,15 @@ $(document).ready(function(){
         console.log(number);
         $('#toggle p').css('font-size', number + uom);
     });
-
+    //Photos
+    $('#photos nav li').click(function(){
+        var numeroLigne = $(this).index();
+        //Affiche les index des images
+        console.log(numeroLigne);
+        $('#photos div img').hide(2000);//cacher les images par le clic
+        $('#photos div img').eq(numeroLigne).show(2000);
+        //les montrer avec le clic
+    });
 
 });
 //https://github.com/erwantanguy/B1MDSDevFront

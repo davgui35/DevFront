@@ -44,3 +44,23 @@ body {
 .vert{
     background-color: green !important;
 }
+
+/*Aucune image est visible*/
+#photos div img{
+    display: none;
+}
+
+#photos nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+#photos nav li{
+    margin-bottom: 10px;
+}
+
+/*images ne peuvent pas avoir plus de 100% de leur container*/
+#photos nav li img{
+    max-width: 100%;
+    height: auto;
+}
