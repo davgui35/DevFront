@@ -5,16 +5,16 @@ $couleurSecondaire:blue;
 $cp:$couleurPrincipal;
 $cs:$couleurSecondaire;
 
-body{
-    //couleur titre
-    h1{
-        color:$cp;
-        //couleur de survol
-        &:hover{
-            color:$cs;
-        }
-    }
-}
+// body{
+//     //couleur titre
+//     h1{
+//         color:$cp;
+//         //couleur de survol
+//         &:hover{
+//             color:$cs;
+//         }
+//     }
+// }
 
 .monalerte{
     background-color: rgba(0, 0, 0, .5);
@@ -76,4 +76,26 @@ body{
 }
 .exemple3{
     @include br(10px,55px,28px,4px);
+}
+
+
+//annuaire
+
+.annuaire .nav-item{
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    &:hover{
+        color:red;
+    }
+}
+
+.card{
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.card-img-top{
+    margin-left: 30%;
+    margin-top: 10px;
 }
