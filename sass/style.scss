@@ -1,0 +1,79 @@
+//Déclaration des variables
+$couleurPrincipal:red;
+$couleurSecondaire:blue;
+//Raccourcis variable
+$cp:$couleurPrincipal;
+$cs:$couleurSecondaire;
+
+body{
+    //couleur titre
+    h1{
+        color:$cp;
+        //couleur de survol
+        &:hover{
+            color:$cs;
+        }
+    }
+}
+
+.monalerte{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+%message{
+    padding:.5em;
+    border: 1px solid rgba(0, 0, 0, .1);
+    font-weight: bold;
+}
+
+//Mettre en paramètre ce que tu appeles dans la fonction
+@mixin size($width,$height:$width,$radius:0)//si on a pas de valeur à la hauteur, alors on assigne la valeur de la largeur à la hauteur
+{
+    width:$width;
+    height: $height;
+    border-radius: $radius;
+}
+
+.message{
+    &-error{
+        @include size(200px);
+        color:red;
+        @extend %message;//renvoie la class message
+    }
+    &-valid{
+        @include size(150px);
+        color:green;
+        @extend %message;
+    }
+    &-warning{
+        @include size(220px);
+        color: orange;
+        @extend %message;
+    }
+    &-info{
+        @include size(120px,50px);
+        color:blue;
+        @extend %message;
+    }
+}
+
+@mixin br($valeur1:5px,$valeur2:$valeur1,$valeur3:$valeur1,$valeur4:$valeur1){
+    border-radius: $valeur1 $valeur2 $valeur3 $valeur4;
+}
+
+[class^=exemple]{//^ veut dire commence par exemple
+    //$ veut dire fini par
+    background: green;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.exemple1{
+    @include br;
+}
+.exemple2{
+    @include br(10px);
+}
+.exemple3{
+    @include br(10px,55px,28px,4px);
+}
