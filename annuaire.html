@@ -17,7 +17,7 @@
             <h1 class="col-12">Annuaire B1</h1>
         </header>
         <main class="row">
-            <nav class="col-12">
+            <nav class="col-9">
                 <ul class="nav">
                     <li class="nav-item">Tous</li>
                     <li class="nav-item">A</li>
@@ -48,34 +48,204 @@
                     <li class="nav-item">Z</li>
                 </ul>
             </nav>
+            <select class="col-3" id="categories">
+                <option value="all" selected>Toutes les catégories</option>
+                <option value="webdesign">Webdesign</option>
+                <option value="webmarketing">Webmarketing</option>
+                <option value="developpement">Développement</option>
+                <option value="design">Design</option>
+            </select>
+            <section class="col-12" id="liste">
+                <div class="card-columns">
+                     <article class="card" data-cat="webdesign developpement" data-sexe="h">
+                        <img class="card-img-top" style="max-width: 100px;" alt="Alexandre Kling">
+                        <div class="card-body">
+                            <h5 class="card-title">Alexandre <span>Kling</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                                <li>Développement</li>
+                            </ul>
+                        </div>
+                    </article> 
+                    <article class="card" data-cat="webdesign" data-sexe="h">
+                        <img class="card-img-top" style="max-width: 100px;" alt="Théo BELLIARD">
+                        <div class="card-body">
+                            <h5 class="card-title">Théo <span>BELLIARD</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign" data-sexe="f">
+                        <img class="card-img-top"  style="max-width: 70px;" alt="Léa Ben-Lahsen">
+                        <div class="card-body">
+                            <h5 class="card-title">Léa <span>Ben-Lahsen</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign" data-sexe="f">
+                        <img class="card-img-top"   style="max-width: 70px;" alt="Victoire Yao Amani">
+                        <div class="card-body">
+                            <h5 class="card-title">Victoire <span>Yao Amani</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Kim Huimy">
+                        <div class="card-body">
+                            <h5 class="card-title">Kim <span>HUIMY</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing" data-sexe="h">
+                        <img class="card-img-top" style="max-width: 100px;" alt="Allan Poix">
+                        <div class="card-body">
+                            <h5 class="card-title">Allan <span>Poix</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="developpement" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Mathieu Besson ">
+                        <div class="card-body">
+                            <h5 class="card-title">Mathieu <span>Besson</span></h5>
+                            <ul class="card-text">
+                                <li>Développement</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="developpement" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Enzo Bush ">
+                        <div class="card-body">
+                            <h5 class="card-title">Enzo <span>Bush</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing" data-sexe="f">
+                        <img class="card-img-top"   style="max-width: 70px;" alt="Chloé Saunier">
+                        <div class="card-body">
+                            <h5 class="card-title">Chloé <span>Saunier</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign webmarketing" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Julien Demanet">
+                        <div class="card-body">
+                            <h5 class="card-title">Julien <span>Demanet</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign developpement" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="David Guillin">
+                        <div class="card-body">
+                            <h5 class="card-title">David <span>Guillin</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesin</li>
+                                <li>Développement</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign webmarketing" data-sexe="f">
+                        <img class="card-img-top"  style="max-width: 70px;" alt="Amandine Bellayer">
+                        <div class="card-body">
+                            <h5 class="card-title">Amandine <span>Bellayer</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesin</li>
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing developpement" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Clément Benoit">
+                        <div class="card-body">
+                            <h5 class="card-title">Clément <span>Benoit</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                                <li>Développement</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Mathieu Frikker">
+                        <div class="card-body">
+                            <h5 class="card-title">Mathieu <span>Frikker</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing" data-sexe="f">
+                        <img class="card-img-top" style="max-width: 70px;" alt="Bleuen Le Pioufle">
+                        <div class="card-body">
+                            <h5 class="card-title">Bleuen <span>Le Pioufle</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign webmarketing" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;"  alt="Malo LE ROYER">
+                        <div class="card-body">
+                            <h5 class="card-title">Malo <span>LE ROYER</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesin</li>
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Simon Sauques">
+                        <div class="card-body">
+                            <h5 class="card-title">Simon <span>Sauques</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="design" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Lucas Recrosio">
+                        <div class="card-body">
+                            <h5 class="card-title">Lucas <span>Recrosio</span></h5>
+                            <ul class="card-text">
+                                <li>Design</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webdesign" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Grégoire Levillain">
+                        <div class="card-body">
+                            <h5 class="card-title">Grégoire <span>Levillain</span></h5>
+                            <ul class="card-text">
+                                <li>Webdesign</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card" data-cat="webmarketing" data-sexe="h">
+                        <img class="card-img-top"  style="max-width: 100px;" alt="Allan Brunel">
+                        <div class="card-body">
+                            <h5 class="card-title">Allan <span>Brunel</span></h5>
+                            <ul class="card-text">
+                                <li>Webmarketing</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
-        <select class="col-6" id="categories">
-            <option value="all" selected>Toutes les catégories</option>
-            <option value="webdesign">Webdesign</option>
-            <option value="webmarketing">Webmarking</option>
-            <option value="developpement">Développement</option>
-            <option value="design">Design</option>
-        </select>
-        <section class="col-12" id="liste">
-            <div class="row">
-                <article class="card col-md-3" data-name="nom" data-cat="webdesign webmarketing Webmarking developpement" data-sexe="h ou f"; style="width: 18rem;">
-                    <img src="images/tete.png" class="card-img-top" style="max-width:100px;" alt="avatar">
-                    <div class="card-body">
-                      <h5 class="card-title">Nom Prénom</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </article>
-                <article class="card col-md-3" data-name="nom" data-cat="webdesign webmarketing Webmarking developpement" data-sexe="h ou f"; style="width: 18rem;">
-                    <img src="images/femmeBob.jpg" class="card-img-top" style="max-width:100px;" alt="avatar">
-                    <div class="card-body">
-                      <h5 class="card-title">Nom Prénom</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </article>
-            </div>
-        </section>
     </div>
 </body>
 <script src="monjs.js"></script>

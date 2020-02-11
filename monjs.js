@@ -137,6 +137,10 @@ $(document).ready(function(){
         //les montrer avec le clic
     });
 
+    //ANNUAIRE
+    $('.annuaire article[data-sexe=h]').children('img').attr('src','images/tete.png');
+    $('.annuaire article[data-sexe=f]').children('img').attr('src','images/femmeBob.jpg');
+
 });
 //https://github.com/erwantanguy/B1MDSDevFront
 

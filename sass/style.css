@@ -54,6 +54,18 @@
   border-radius: 10px 55px 28px 4px;
 }
 
+.annuaire nav, .annuaire select {
+  margin: 5px 0;
+}
+
+.annuaire #liste {
+  margin: 30px 0 0;
+}
+
+.annuaire #liste .card-columns {
+  column-count: 5;
+}
+
 .annuaire .nav-item {
   cursor: pointer;
   padding: 5px;
@@ -67,9 +79,19 @@
 .card {
   margin-top: 25px;
   margin-left: 10px;
+  height: 250px;
 }
 
 .card-img-top {
-  margin-left: 30%;
+  margin-left: 35%;
   margin-top: 10px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+  list-style: none;
 }
