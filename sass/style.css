@@ -95,3 +95,12 @@
   text-align: center;
   list-style: none;
 }
+
+.nolist {
+  border: 1px solid #ed1f1f;
+  color: #fff;
+  background-color: #d00c1e;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+}

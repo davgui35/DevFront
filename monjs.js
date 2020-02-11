@@ -150,9 +150,35 @@ $(document).ready(function(){
         console.log(alpha);
         if(alpha != 'TOUS'){ //Si c'est différent de tous
             $('.annuaire article').hide();//On les cache tous en cliquant sur TOUS
+            $('p.nolist').hide();
             $('.annuaire article[data-name='+alpha+']').show();
         }else{
             $('.annuaire article').show();//On les remontre tous si on clique sur une lettre
+            $('p.nolist').hide();
+        }
+        //:visible pseudo élément pour savoir si c'est visible On met le point ! pour dire l'inverse
+        if(!$('.annuaire article').is(':visible')){
+            $('<p class="nolist">Personne ne correspond au critère sélectionné</p>').appendTo('#liste > div');
+        }
+    });
+
+    //Récuperer ce qui change dans select
+    $('select').on('change', function(){
+        //alert(this.value);//Affiche dans l'alerte la catégorie
+        var cat = this.value;
+        console.log(cat);
+        //Si c'est différent de all
+        if(cat != 'all'){
+            //On cache les articles
+            $('.annuaire article').hide();
+            $('p.nolist').hide();
+            //On affiche la catégorie selectionnée
+            $('.annuaire article[data-cat~='+cat+']').show();
+            //~ veut dire contient au moins
+        }else{
+            //Sinon on montre tous
+            $('.annuaire article').show();
+            $('p.nolist').hide();
         }
     });
 
