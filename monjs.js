@@ -69,7 +69,7 @@ $(document).ready(function(){
 
     //Reprise du nombre de li plus 1
     var i = $('li').length + 1;
-    console.log(i);
+    //console.log(i);
     //alert(i);afficher une boite de dialogue
     $('#plus').click(function(){
         $('<li>ligne' + i + '</li>').appendTo('ul');
@@ -140,6 +140,21 @@ $(document).ready(function(){
     //ANNUAIRE
     $('.annuaire article[data-sexe=h]').children('img').attr('src','images/tete.png');
     $('.annuaire article[data-sexe=f]').children('img').attr('src','images/femmeBob.jpg');
+    // $('.annuaire option').click(function(){
+    //     var cat = $(this).attr('value');
+    //     console.log(cat);
+    // });//Ne fonctionne pas
+
+    $('.annuaire li').click(function(){
+        var alpha = $(this).html();
+        console.log(alpha);
+        if(alpha != 'TOUS'){ //Si c'est différent de tous
+            $('.annuaire article').hide();//On les cache tous en cliquant sur TOUS
+            $('.annuaire article[data-name='+alpha+']').show();
+        }else{
+            $('.annuaire article').show();//On les remontre tous si on clique sur une lettre
+        }
+    });
 
 });
 //https://github.com/erwantanguy/B1MDSDevFront
