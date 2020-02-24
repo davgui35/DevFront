@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
 
     $('#animate div').click(function(){
-        //1)Sans con concaténé, elle se déplace en horizontale et ensuite à la verticale
+        //1)Sans concaténé, elle se déplace en horizontale et ensuite à la verticale
         // $(this).animate({
         //     "left":"300px"
         // }, 3000);
