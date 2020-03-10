@@ -1,3 +1,41 @@
 body {
   background-color: red;
 }
+
+.tablet {
+  display: none;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box article {
+  width: 100%;
+  background: white;
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: yellow;
+  }
+  .tablet {
+    display: block;
+  }
+  .box article {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: blue;
+  }
+  .box article {
+    width: calc(33.33333333% - 10px);
+  }
+}

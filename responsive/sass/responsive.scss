@@ -1,3 +1,53 @@
+$mobile-max: 767px;//valeur maximum mobile
+$tablet: 768px;//valeur minimum tablette
+$tablet-max: 991px;//valeur maximum tablette
+$desktop: 992px;//valeur minimum pour les ordinateurs
 body{
     background-color: red;
+}
+
+.tablet{
+    display:none;
+}
+
+.box{
+    display:flex;
+    flex-wrap: wrap;
+    article{
+        width: 100%;
+        background: white;
+        margin: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+}
+
+//@media pour taille à designer
+//A partir de la tablette
+@media (min-width: $tablet) AND (max-width: $tablet-max){
+    body{
+        background-color: yellow;
+    }
+    .tablet{
+        display: block;
+    }
+
+    .box{
+        article{
+            width: calc(50% - 10px);//Enlever 5px de chaque côté margin:5px;
+        }
+    }
+}
+
+//Pour les ordinateurs
+@media (min-width: $desktop){
+    body{
+        background-color: blue;
+    }
+
+    .box{
+        article{
+            width: calc(33.33333333% - 10px);//1/3 de l'écran 
+        }
+    }
 }
