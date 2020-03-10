@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "main main main aside" "footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: yellow;
+}
+
+main {
+  grid-area: main;
+  background-color: blue;
+}
+
+aside {
+  grid-area: aside;
+  background-color: purple;
+}
+
+footer {
+  grid-area: footer;
+  background-color: pink;
+}
