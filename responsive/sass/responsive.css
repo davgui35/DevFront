@@ -19,6 +19,16 @@ body {
   box-sizing: border-box;
 }
 
+#maBoite {
+  display: block;
+}
+
+#maBoite > * {
+  margin: 5px;
+  padding: 5px;
+  background: white;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     background-color: yellow;
@@ -29,6 +39,30 @@ body {
   .box article {
     width: calc(50% - 10px);
   }
+  #maBoite {
+    display: flex;
+  }
+  #maBoite > * {
+    margin: 5px;
+    padding: 5px;
+    background: white;
+  }
+  #maBoite div img {
+    padding: 15px;
+    width: calc(33.3333%, 10px);
+  }
+  #maBoite article {
+    flex: 1;
+  }
+  #maBoite nav a {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+  #maBoite nav {
+    display: inline;
+    width: 200px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -37,5 +71,23 @@ body {
   }
   .box article {
     width: calc(33.33333333% - 10px);
+  }
+  #maBoite {
+    display: flex;
+  }
+  #maBoite > * {
+    padding: 5px;
+  }
+  #maBoite div img {
+    margin: 15px;
+    max-width: 300px;
+  }
+  #maBoite article {
+    margin: 5px;
+    max-width: calc(100% - 500px);
+  }
+  #maBoite nav {
+    display: block;
+    width: 200px;
   }
 }

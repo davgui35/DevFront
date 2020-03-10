@@ -22,6 +22,16 @@ body{
     }
 }
 
+#maBoite{
+    display: block;
+    &>*{
+        margin: 5px;
+        padding: 5px;
+        background: white;
+    }
+
+}
+
 //@media pour taille à designer
 //A partir de la tablette
 @media (min-width: $tablet) AND (max-width: $tablet-max){
@@ -37,6 +47,33 @@ body{
             width: calc(50% - 10px);//Enlever 5px de chaque côté margin:5px;
         }
     }
+
+    #maBoite{
+        &>*{
+            margin: 5px;
+            padding: 5px;
+            background: white;
+        }
+
+        display:flex;
+        div img{
+            padding: 15px;
+            width: calc(33.3333%, 10px);
+        }
+
+        article{
+            flex:1;
+        }
+        nav a{
+            display: block;
+            text-align: center;
+            max-width: 100%;
+        }
+        nav{
+            display: inline;
+            width: 200px;
+        }
+    }
 }
 
 //Pour les ordinateurs
@@ -47,7 +84,26 @@ body{
 
     .box{
         article{
-            width: calc(33.33333333% - 10px);//1/3 de l'écran 
+            width: calc(33.33333333% - 10px);//1/3 de l'écran en enlevant 5px de chaque côté
+        }
+    }
+
+    #maBoite{
+        display:flex;
+        &>*{
+            padding: 5px;
+        }
+        div img{
+            margin: 15px;
+            max-width: 300px;
+        }
+        article{
+            margin: 5px;
+            max-width: calc(100% - 500px);
+        }
+        nav{
+            display: block;
+            width: 200px;
         }
     }
 }
